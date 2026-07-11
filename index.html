@@ -57,7 +57,7 @@
         <p>Download the latest version for your device.</p>
 
         <div id="download-container">
-            <p id="status">Checking for updates...</p>
+            <p id="status">Scanning all releases...</p>
         </div>
         
         <div id="version-text"></div>
@@ -67,14 +67,28 @@
         const user = 'nitheshd30';
         const repo = 'Maruthi-Mobiles';
 
-        fetch(`https://api.github.com/repos/${user}/${repo}/releases/latest`)
+        // Fetch all releases instead of just the latest
+        fetch(`https://api.github.com/repos/${user}/${repo}/releases`)
         .then(response => response.json())
         .then(data => {
             const container = document.getElementById('download-container');
             const versionText = document.getElementById('version-text');
-            container.innerHTML = ''; // Clear status text
+            container.innerHTML = ''; 
 
-            // Function to create a button
+            let winAsset = null;
+            let androidAsset = null;
+
+            // Sort releases by date (newest first)
+            data.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
+
+            // Look through all releases to find the latest matching files
+            for (const release of data) {
+                if (!winAsset) winAsset = release.assets.find(a => a.name.includes('_windows'));
+                if (!androidAsset) androidAsset = release.assets.find(a => a.name.includes('_android'));
+                
+                if (winAsset && androidAsset) break; 
+            }
+
             const addBtn = (asset, label) => {
                 const a = document.createElement('a');
                 a.href = asset.browser_download_url;
@@ -83,18 +97,13 @@
                 container.appendChild(a);
             };
 
-            // Find assets based on your tags
-            const winAsset = data.assets.find(a => a.name.includes('_windows'));
-            const androidAsset = data.assets.find(a => a.name.includes('_android'));
-
-            if (winAsset) addBtn(winAsset, "Download for Windows (.exe)");
-            if (androidAsset) addBtn(androidAsset, "Download for Android (.apk)");
+            if (winAsset) addBtn(winAsset, "Download Windows Version");
+            if (androidAsset) addBtn(androidAsset, "Download Android Version");
 
             if (!winAsset && !androidAsset) {
-                container.innerHTML = "<p>No files found in latest release.</p>";
+                container.innerHTML = "<p>No files found in any release.</p>";
             } else {
-                const date = new Date(data.published_at).toLocaleDateString();
-                versionText.innerHTML = `Latest Version: <strong>${data.tag_name}</strong><br>Released: ${date}`;
+                versionText.innerHTML = "Links updated to the latest available files.";
             }
         })
         .catch(error => {
