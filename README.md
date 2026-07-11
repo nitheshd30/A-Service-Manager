@@ -2,4 +2,4 @@
 
 Software Updates
 
-https://nitheshd30.github.io/Maruthi-Mobiles/
+https://nitheshd30.github.io/A-Service-Manager/
