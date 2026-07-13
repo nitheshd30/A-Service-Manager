@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | A Service Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2196F3;
+            --bg: #0F1113;
+            --card-bg: #1E2124;
+            --text: #E0E0E0;
+            --text-muted: #9BA1A6;
+            --accent: #64B5F6;
+        }
+        * { box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; background-color: var(--bg); color: var(--text); max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        .container { background-color: var(--card-bg); padding: 40px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.05); }
+        header { text-align: center; margin-bottom: 40px; }
+        h1 { color: #FFFFFF; font-size: 2.5rem; margin-bottom: 10px; font-weight: 700; letter-spacing: -0.5px; }
+        .last-updated { color: var(--accent); font-size: 0.9rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
+        h2 { color: var(--accent); font-size: 1.4rem; margin-top: 40px; display: flex; align-items: center; font-weight: 600; }
+        h2::before { content: ""; width: 4px; height: 20px; background-color: var(--primary); margin-right: 12px; border-radius: 2px; }
+        p { margin-bottom: 20px; color: var(--text-muted); }
+        strong { color: #FFFFFF; font-weight: 600; }
+        ul { padding-left: 20px; margin-bottom: 20px; color: var(--text-muted); }
+        li { margin-bottom: 10px; }
+        .footer { margin-top: 60px; text-align: center; font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; color: var(--text-muted); }
+        .footer a { color: var(--primary); text-decoration: none; }
+        @media (max-width: 600px) {
+            .container { padding: 25px; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <p class="last-updated">Last Updated: January 2026</p>
+            <h1>Privacy Policy</h1>
+        </header>
 
+        <section>
+            <p>We value your privacy. This application is designed to function as a service management tool for your business while maintaining the highest standards of data security.</p>
+
+            <h2>1. Data Collection & Security</h2>
+            <p>We do <strong>NOT</strong> collect, store, or share any personal data from your device. All information you enter (Repairs, Inventory, etc.) is stored securely in your <strong>private database (Supabase)</strong> and is only accessible by you and your authorized users.</p>
+
+            <h2>2. Data Retention & Deletion</h2>
+            <p>If you choose to delete your account, your data (Repairs, Inventory, etc.) will be retained for <strong>30 days</strong> before being permanently deleted from our servers. This period allows you to contact support if you wish to recover your data. After 30 days, all associated database tables are automatically and permanently removed.</p>
+
+            <h2>3. Permissions Required</h2>
+            <ul>
+                <li><strong>Internet:</strong> Required to sync with your private database and cloud backup services.</li>
+                <li><strong>Biometric:</strong> Used solely for secure and local app login on your device.</li>
+                <li><strong>Storage:</strong> Required for generating and saving Excel reports to your device's Downloads folder.</li>
+            </ul>
+
+            <h2>4. Third-Party Services</h2>
+            <p>The application offers optional integration with <strong>Google Drive</strong> for data backups. These backups are stored in a hidden 'App Data' folder that only this app can access. Your personal files on Google Drive are never accessed, modified, or shared.</p>
+
+            <h2>5. Policy Consent</h2>
+            <p>By using this app, you agree that your data is managed entirely within the parameters of your own private database infrastructure. We do not use trackers, analytics, or third-party advertising that collects personal information.</p>
+        </section>
+
+        <div class="footer">
+            &copy; 2026 Nithesh. All rights reserved.<br>
+            Website: <a href="https://nitheshd30.github.io/A-Service-Manager/">nitheshd30.github.io</a>
+        </div>
+    </div>
+</body>
+</html>
