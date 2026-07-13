@@ -1,45 +1,65 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms and Conditions - A Service Manager</title>
+    <title>Terms & Conditions | A Service Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
-        h1 { color: #2196F3; border-bottom: 2px solid #2196F3; padding-bottom: 10px; }
-        h2 { color: #1976D2; margin-top: 30px; }
-        .footer { margin-top: 50px; font-size: 0.8em; color: #777; text-align: center; border-top: 1px solid #ddd; padding-top: 20px; }
-        .last-updated { font-style: italic; color: #666; }
+        :root {
+            --primary: #2196F3;
+            --bg: #0F1113;
+            --card-bg: #1E2124;
+            --text: #E0E0E0;
+            --text-muted: #9BA1A6;
+            --accent: #64B5F6;
+        }
+        * { box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; background-color: var(--bg); color: var(--text); max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        .container { background-color: var(--card-bg); padding: 40px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.05); }
+        header { text-align: center; margin-bottom: 40px; }
+        h1 { color: #FFFFFF; font-size: 2.5rem; margin-bottom: 10px; font-weight: 700; letter-spacing: -0.5px; }
+        .last-updated { color: var(--accent); font-size: 0.9rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
+        h2 { color: var(--accent); font-size: 1.4rem; margin-top: 40px; display: flex; align-items: center; font-weight: 600; }
+        h2::before { content: ""; width: 4px; height: 20px; background-color: var(--primary); margin-right: 12px; border-radius: 2px; }
+        p { margin-bottom: 20px; color: var(--text-muted); }
+        strong { color: #FFFFFF; font-weight: 600; }
+        .footer { margin-top: 60px; text-align: center; font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; color: var(--text-muted); }
+        .footer a { color: var(--primary); text-decoration: none; }
     </style>
 </head>
 <body>
-    <h1>Terms and Conditions</h1>
-    <p class="last-updated">Last Updated: July 2024</p>
+    <div class="container">
+        <header>
+            <p class="last-updated">Effective Date: January 2026</p>
+            <h1>Terms & Conditions</h1>
+        </header>
 
-    <p>Welcome to <strong>A Service Manager</strong>. By using this application, you agree to comply with and be bound by the following terms and conditions.</p>
+        <section>
+            <p>Welcome to <strong>A Service Manager</strong>. These terms govern your use of our application for professional business operations.</p>
 
-    <h2>1. Use of Service</h2>
-    <p>A Service Manager is a tool designed to help businesses manage repair tickets, inventory, and sales. You agree to use the application only for lawful business purposes and in accordance with these terms.</p>
+            <h2>1. Service Utilization</h2>
+            <p>You agree to use this tool exclusively for professional repair tracking and data management in compliance with local laws and business regulations.</p>
 
-    <h2>2. Data Ownership and Security</h2>
-    <p>Your business data (repairs, customers, inventory, sales) is stored in a private database infrastructure (Supabase). You retain full ownership of your data. While we implement standard security measures, you are responsible for maintaining the confidentiality of your login credentials.</p>
+            <h2>2. Data Privacy & Sovereignty</h2>
+            <p>Your business information is stored in a private <strong>Supabase</strong> instance. We do not monitor or access your data. Security of login credentials remains your primary responsibility.</p>
 
-    <h2>3. Cloud Backup</h2>
-    <p>The application offers optional integration with Google Drive for data backups. By enabling this feature, you authorize the app to create and manage backup files in a dedicated hidden folder in your Google Drive account.</p>
+            <h2>3. Cloud Synchronization</h2>
+            <p>Optional cloud backups are facilitated through <strong>Google Drive</strong>. Data is stored in a secure, hidden folder to ensure business continuity without compromising privacy.</p>
 
-    <h2>4. Account Suspension and Deletion</h2>
-    <p>We reserve the right to suspend accounts that violate these terms or fail to maintain valid licensing. In the event of account deletion, data is retained for a grace period of 30 days before permanent removal from our servers.</p>
+            <h2>4. Licensing & Access</h2>
+            <p>Access requires a valid active license. Users will receive automated alerts 15 days prior to expiration. Failure to renew may result in restricted access.</p>
 
-    <h2>5. Limitation of Liability</h2>
-    <p>The application is provided "as is" without warranties of any kind. We shall not be liable for any data loss, business interruption, or financial damages arising from the use or inability to use the service.</p>
+            <h2>5. Recovery Policy</h2>
+            <p>Deleted accounts enter a <strong>30-day recovery window</strong>, after which all associated records are permanently purged from our production servers.</p>
+        </section>
 
-    <h2>6. License and Renewals</h2>
-    <p>Access to certain features requires a valid license. You will be notified prior to license expiration. Continued use after expiration may result in restricted access.</p>
-
-    <div class="footer">
-        &copy; 2024 Nithesh. All rights reserved.<br>
-        Contact: nitheshd30@github.io
+        <div class="footer">
+            &copy; 2026 Nithesh. All rights reserved.<br>
+            Website: <a href="https://nitheshd30.github.io/A-Service-Manager/">nitheshd30.github.io</a>
+        </div>
     </div>
 </body>
 </html>
